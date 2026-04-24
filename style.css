@@ -1,0 +1,104 @@
+/* Remove gaps at the edge of the screen */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* The wrapper for the whole header bar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    min-height: 160px;
+    
+    /* Add padding to the left and right */
+    padding: 0 50px; 
+    /* Or use percentages for a responsive feel */
+    /* padding: 0 5%; */
+}
+
+/* Heading styling */
+.header h1 {
+    margin: 0;
+    padding-left: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 50px;
+    color: white;
+}
+
+/* The Red Box on the right */
+/* The container for your links */
+.links {
+    background-color: red;
+    padding: 10px 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    /* This adds space ONLY between the links */
+    gap: 90px; 
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;;
+    font-size: 40px;
+    margin: 0;
+    /* This makes the color change take 0.3 seconds instead of instant */
+    transition: color 0.3s ease; 
+}
+
+.links a:hover {
+    color: yellow;
+}
+
+/* Navigation active state */
+.links a.active {
+    color: yellow;
+}
+
+/* Ensure the navigation stays on top */
+.navigation {
+    position: relative;
+    z-index: 10;       /* Higher number means it sits on top of everything else */
+}
+/* Ensure the content area can hold the absolute background */
+.body-content {
+    position: relative;
+    min-height: 100vh; /* Makes the body area at least full screen */
+    overflow: hidden;   /* Keeps the background from spilling out */
+    color: white;      /* Optional: makes the 'Test' text readable over an image */
+    text-align: center;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 70px;
+    margin-top: 120px;
+}
+
+/* The Background Image */
+.Bg {
+    position: fixed;   /* Use 'fixed' if you want it to stay put while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/home_page.jpg'); /* REPLACE THIS */
+    background-size: cover;
+    background-position: center;
+    z-index: -2;       
+}
+
+/* The Tint Layer */
+.Bgtint {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Red (255, 0, 0) with 0.5 transparency */
+    background-color: rgba(255, 0, 0, 0.5);
+    z-index: -1;       /* Above the image, but below the text/header */
+}
+
