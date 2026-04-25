@@ -105,11 +105,159 @@ body {
     z-index: -1;       /* Above the image, but below the text/header */
 }
 /* dont touch this connects to p1/ */
-.headerAboutUs h1 {
-    text-align: left;
-    padding-left: 20px;
+/* ///////////////////////////////////////////////////////////////// */
+/* this is page 3 mission vision */
+
+
+.logoig{
+    color: #ffbd59;
+    text-align: center;
     font-family: "Times New Roman", Times, serif;
-    font-size: 50px;
-    color: rgb(121, 121, 121);
-    
+    font-size: 40px;
 }
+.vm{
+     color: #ffbd59;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-around;
+ /* This adds space ONLY between the links */
+
+   
+   
+}
+.mission, .vision {
+     color: #ffbd59;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+.vm p {
+     color: black;
+    font-size: 38px;
+    text-align: center;
+    max-width: 600px;
+}
+    
+    
+
+/* ///////////////////////////////////////////////////////////////// */
+/* This controls the layout of the group */
+.image-container {
+  display: flex;
+  flex-direction: row;           /* Ensure single row */
+  justify-content: center;       /* Center all images horizontally */
+  align-items: center;
+  gap: 0px;                     /* Space between images */
+  padding: 50px;
+  flex-wrap: nowrap;             /* Keep all 3 images in one row */
+  position: relative;
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: calc(100% - 100px);
+  height: 400px;
+  background-color: rgba(102, 2, 2, 0.4); /* Red with 0.4 transparency */
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* This controls the red tint */
+.tinted-image {
+  width: 900px;                  /* Adjust size as needed */
+  height: 400px;                 /* Fixed height for consistent sizing */
+  object-fit: cover;             /* Ensures images fill the space uniformly */
+  position: relative;
+  z-index: 1;
+}
+
+/* Text containers aligned under the images */
+.textforprograms {
+  display: flex;
+  flex-direction: row;           /* Keep in one row */
+  justify-content: center;       /* Center all items */
+  align-items: flex-start;       /* Align to top */
+  gap: 50px;                     /* Same gap as image-container */
+  padding: 50px;
+}
+
+.gschool, .hschool, .ugrad {
+  width: 500px;                  /* Match image width */
+  text-align: center;
+  color: #5c5c5c;
+}
+
+.gschool h1, .hschool h1, .ugrad h1 {
+  color: #ffbd59;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+}
+.Bgtint2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Red (255, 0, 0) with 0.5 transparency */
+    background-color: rgba(102, 2, 2, 0.4)
+    z-index: -1;       /* Above the image, but below the text/header */
+}
+
+
+/* ///////////////////////////////////////////////////////////////// */
+/* Where to put the group on the page */
+.image-containerw {
+    display: flex;
+    justify-content: center; /* Centers the 3 images */
+    gap: 60px;               /* Space between polaroid boxes */
+    padding: 40px;
+    flex-direction: row;     /* Ensure single row */
+    align-items: flex-end;   /* Align polaroids at bottom for natural look */
+    flex-wrap: nowrap;       /* Keep all polaroids in one row */
+}
+
+/* The Red Field (Border + Background) - Individual Polaroid Box */
+.image-fieldw {
+    background-color: rgb(255, 0, 0);   /* The color BEHIND the image */
+    border: 40px solid rgb(255, 0, 0);  /* The outer frame */
+    padding: 10px 10px 90px 10px;       /* More space at bottom like polaroid */
+    display: inline-block;
+    line-height: 0;          /* Removes tiny gap at bottom of image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Add shadow for polaroid effect */
+}
+
+/* Controls the size of the images inside the red fields */
+.image-fieldw img {
+    width: 350px;            /* Change this to make images bigger/smaller */
+    height: 450px;
+    display: block;          /* Fix display property */
+}
+
+
+/* ///////////////////////////////////////////////////////////////// */
+.p {
+            font-family:        Arial;
+            font-size:           25px;
+            margin: 50px 0 500px 30px;
+            color:          #5c5c5c;
+}
+.content {
+            font-family:        Arial;
+            font-size:           25px;
+            margin: 50px 0 50px 30px;
+            color:          #060606;
+}
+        
+.aboutUs-1{
+    width:          500px;
+    height:         300px;
+    float:          right;
+    margin: 100px 0 10px 20px;
+}
+
