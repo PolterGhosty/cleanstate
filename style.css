@@ -1,3 +1,4 @@
+/* ///////////////////////////////////////////////////////////////// */
 /* Remove gaps at the edge of the screen */
 body {
     margin: 0;
@@ -37,14 +38,14 @@ body {
     align-items: center;
     
     /* This adds space ONLY between the links */
-    gap: 90px; 
-}
+    gap: 80px; 
+} 
 
 .links a {
     color: white;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;;
-    font-size: 40px;
+    font-size: 35px;
     margin: 0;
     /* This makes the color change take 0.3 seconds instead of instant */
     transition: color 0.3s ease; 
@@ -64,6 +65,8 @@ body {
     position: relative;
     z-index: 10;       /* Higher number means it sits on top of everything else */
 }
+/* ///////////////////////////////////////////////////////////////// */
+/* dont touch this connects to p1/ */
 /* Ensure the content area can hold the absolute background */
 .body-content {
     position: relative;
@@ -101,4 +104,4 @@ body {
     background-color: rgba(255, 0, 0, 0.5);
     z-index: -1;       /* Above the image, but below the text/header */
 }
-
+/* dont touch this connects to p1/ */
